@@ -21,6 +21,7 @@ line(random(500),random(500),random(500),random(500));
 frameRate(20);
 y = random(500);
 x = random(500);
+frameRate(20);
 }
 void mousePressed() {
 textSize(100);
@@ -28,7 +29,8 @@ text("PARTYYYYYYY!!!!", y, x);
 fill(0, 102, 153);
 text("GO CRAZZYYYY", y, x);
 fill(0, 102, 153, 51);
-text("BRING THE HOUSE DOWN!!!", x, y); 
+text("BRING THE HOUSE DOWN!!!", x, y);
+frameRate(60);
 }
 void keyPressed(){
   exit();
