@@ -1,0 +1,35 @@
+void setup() {
+  size(500, 500);
+  background(random(255),random(255),random(255));
+}
+float x = random(width);
+float y = random(height);
+void draw () {
+//use those variables to draw an ellipse
+stroke(0);
+
+float r = random(255);
+float g = random(255);
+float b = random(255);
+float a = random(255);
+float diam = random (200);
+
+fill(r,g,b,a);
+ellipse(x,y,diam,diam);
+rect(0,0,500,500);
+line(random(500),random(500),random(500),random(500));
+frameRate(20);
+y = random(500);
+x = random(500);
+}
+void mousePressed() {
+textSize(100);
+text("PARTYYYYYYY!!!!", y, x); 
+fill(0, 102, 153);
+text("GO CRAZZYYYY", y, x);
+fill(0, 102, 153, 51);
+text("BRING THE HOUSE DOWN!!!", x, y); 
+}
+void keyPressed(){
+  exit();
+}
