@@ -1,0 +1,48 @@
+void setup () {
+  size(1000, 1000);
+
+}
+void mousePressed() {
+textSize(80);
+text("Press any key to to exit", 50, 550);
+
+}
+
+void draw() {
+  background(0);
+  if ((mouseX<width/2)&(mouseY<height/2)) {
+float r = random(0, 255);
+float b = random(255);
+float g = random(255);
+    fill(r,g,b);
+    rect(0, 0, width/2, height/2);
+    frameRate(5);
+  } else if ((mouseX>width/2)&(mouseY>height/2)) {
+
+float r = random(0, 255);
+float b = random(255);
+float g = random(255);
+    fill (r, g, b);
+    rect(width/2, height/2, width/2, height/2);
+    frameRate(60);
+  } else if ((mouseX<width/2)&(mouseY>height/2)) {
+    
+float r = random(0, 255);
+float b = random(255);
+float g = random(255);
+    fill (r, g, b);
+    rect(0, height/2, width/2, height/2);
+    frameRate(15);
+  } else if ((mouseX>width/2)&(mouseY<height/2)) {
+    
+float r = random(0, 255);
+float b = random(255);
+float g = random(255);
+    fill (r, g, b);
+    rect (width/2, 0, width/2, height/2);
+    frameRate(8);
+  }
+}
+void keyPressed(){
+  exit();
+}
