@@ -1,0 +1,30 @@
+//set pin numbers
+const int ledPin = 13;         //won't change
+const int buttonPin = 7;
+
+//variables will change
+int buttonState = 0;          //variables that make it so it reads the pushbutton status
+
+void setup() {
+
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);    //start the LED pin as an out
+  pinMode(buttonPin, INPUT);  //start the pushbutton pin as an out
+}
+
+void loop() {
+
+  buttonState = digitalRead(buttonPin); //pushbutton value value state
+
+  if (buttonState == HIGH) {            //check if button pressed
+    //if it is, the buttonState is HIGH
+    digitalWrite(ledPin, HIGH);         //LED on    
+    Serial.println("LED ON +++++++"); 
+  }
+  else {
+
+    digitalWrite(ledPin, LOW);          //LED off
+    Serial.println("LED OFF -------");
+  }
+
+}
